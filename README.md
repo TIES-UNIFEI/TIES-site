@@ -1,28 +1,20 @@
-# TIES — Tecnologias Integradas e Engenharia Sustentável
-
-Website institucional multilíngue do grupo de pesquisa TIES/UNIFEI, preparado para GitHub Pages.
+# TIES · UNIFEI — site institucional
 
 ## Estrutura
+- `pt/index.html`, `en/index.html`, `es/index.html`: conteúdo de cada idioma.
+- `assets/css/style.css`: identidade visual compartilhada pelas três versões.
+- `assets/js/main.js`: menu responsivo e carrossel central de destaques.
+- `assets/images/`: logotipos institucionais.
+- `CNAME`: domínio institucional configurado no GitHub Pages.
 
-- `index.html`: redireciona para a versão em português.
-- `pt/index.html`: página em português, atualizada com o arquivo de conteúdo fornecido pela equipe.
-- `en/index.html`: página em inglês.
-- `es/index.html`: página em espanhol.
-- `assets/css/style.css`: identidade visual responsiva compartilhada pelas três versões.
-- `assets/js/main.js`: comportamento do menu móvel.
-- `assets/images/`: logotipos vetoriais do TIES.
-- `CNAME`: domínio institucional `ties.unifei.edu.br`.
+## Atualizar os destaques centrais
+No arquivo de cada idioma, localize a seção `spotlight-section`. Cada item é um bloco `article` com o atributo `data-spotlight-slide`. Para acrescentar um destaque, duplique um `article`, ajuste título, texto, link e composição visual. Atualize também os botões `data-spotlight-to` da seção `spotlight-dots` para manter a mesma quantidade de indicadores. O carrossel alterna automaticamente a cada 8 segundos e pausa quando recebe foco ou quando o cursor está sobre ele.
 
-## Direção visual
+## Atualizar as imagens das linhas de pesquisa
+Os quadros MSU, FDT, Ee e IAsoc usam grafismos temporários em CSS, não logotipos oficiais. Quando os arquivos oficiais estiverem disponíveis, coloque-os em `assets/images/` e substitua o conteúdo de cada `div.research-art` por uma imagem, por exemplo: `<img src="../assets/images/logo-msu.svg" alt="MSU — Metamaterials and Structures">`.
 
-A identidade combina uma abertura editorial e orientada a projetos, uma hierarquia clara para apresentar pesquisa e áreas científicas, e seções modulares para equipe, infraestrutura e parcerias. A paleta mantém o azul institucional como base e usa verde-água como acento associado à sustentabilidade e à inovação.
-
-## Conteúdo e atualizações
-
-A versão em português usa o conteúdo do `index.html` enviado para esta atualização. Os espaços para projetos, infraestrutura, perfis da equipe e parcerias continuam estruturados para receber novas informações.
-
-As versões em inglês e espanhol foram mantidas nesta etapa; recomenda-se atualizá-las depois da validação do conteúdo em português, para que as três línguas tenham correspondência textual.
+## Atualizar conteúdo
+Edite apenas o bloco da seção desejada nos arquivos HTML. Mantenha os `id` das seções (por exemplo `projects`, `team`, `partners`, `infrastructure`, `production`, `contact`/`contacto`) para preservar os links de navegação.
 
 ## Publicação
-
-O repositório está preparado para GitHub Pages usando a branch `main` e a pasta raiz (`/`). O domínio personalizado está indicado no arquivo `CNAME`.
+O site usa GitHub Pages, branch `main`, pasta `/ (root)`. Depois de enviar as alterações e fazer commit na branch `main`, o GitHub Pages publica a atualização automaticamente.

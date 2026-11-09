@@ -5,22 +5,24 @@ Website institucional multilíngue do grupo de pesquisa TIES/UNIFEI, preparado p
 ## Estrutura
 
 - `index.html`: redireciona para a versão em português.
-- `pt/index.html`: página em português.
+- `pt/index.html`: página em português, atualizada com o arquivo de conteúdo fornecido pela equipe.
 - `en/index.html`: página em inglês.
 - `es/index.html`: página em espanhol.
-- `assets/css/style.css`: identidade visual e responsividade.
-- `assets/js/main.js`: menu móvel.
+- `assets/css/style.css`: identidade visual responsiva compartilhada pelas três versões.
+- `assets/js/main.js`: comportamento do menu móvel.
 - `assets/images/`: logotipos vetoriais do TIES.
 - `CNAME`: domínio institucional `ties.unifei.edu.br`.
 
+## Direção visual
+
+A identidade combina uma abertura editorial e orientada a projetos, uma hierarquia clara para apresentar pesquisa e áreas científicas, e seções modulares para equipe, infraestrutura e parcerias. A paleta mantém o azul institucional como base e usa verde-água como acento associado à sustentabilidade e à inovação.
+
 ## Conteúdo e atualizações
 
-A apresentação institucional e as linhas de pesquisa foram organizadas com base no espelho do grupo TIES no Diretório dos Grupos de Pesquisa do CNPq. A página registra a data de consulta e a data do último envio cadastrado no CNPq.
+A versão em português usa o conteúdo do `index.html` enviado para esta atualização. Os espaços para projetos, infraestrutura, perfis da equipe e parcerias continuam estruturados para receber novas informações.
 
-As áreas de projetos, infraestrutura e perfis individuais da equipe foram mantidas como espaços estruturados para futuras atualizações. Para preenchê-las, edite os arquivos `pt/index.html`, `en/index.html` e `es/index.html`, mantendo o mesmo conteúdo nas três línguas.
-
-Os quantitativos apresentados por linha de pesquisa são aqueles registrados no espelho do CNPq; uma mesma pessoa pode estar vinculada a mais de uma linha. Os dados gerais de recursos humanos reproduzem os indicadores do cadastro consultado.
+As versões em inglês e espanhol foram mantidas nesta etapa; recomenda-se atualizá-las depois da validação do conteúdo em português, para que as três línguas tenham correspondência textual.
 
 ## Publicação
 
-O repositório está preparado para GitHub Pages usando a branch `main` e a pasta raiz (`/`).
+O repositório está preparado para GitHub Pages usando a branch `main` e a pasta raiz (`/`). O domínio personalizado está indicado no arquivo `CNAME`.

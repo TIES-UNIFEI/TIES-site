@@ -1,0 +1,22 @@
+Arquivos incluídos nesta atualização
+
+Português (pt):
+- equipe.html
+- estudantes.html
+- labties.html
+- publicacoes.html
+- index.html atualizado para apontar aos quadros das páginas separadas
+
+Inglês (en) e Espanhol (es):
+- equipe.html
+- estudantes.html
+- labties.html
+- publicacoes.html
+
+Arquivos compartilhados:
+- assets/css/style.css (estilos responsivos das páginas)
+- assets/images/equipamentos/*.webp (fotos reais fornecidas)
+- assets/images/prototipos/*.webp (foto real dos protótipos didáticos)
+- README.md
+
+Mantenha o CNAME, o index.html da raiz, os SVGs de logotipo e o JavaScript existentes.

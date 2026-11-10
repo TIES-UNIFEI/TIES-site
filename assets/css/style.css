@@ -308,3 +308,133 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* Fix: distribute the three direct children of the About section explicitly.
+   On wide screens they form three columns; on smaller screens the objective
+   panel moves below the introduction instead of collapsing into a narrow track. */
+@media (min-width: 1121px) {
+  .about-frame {
+    grid-template-columns: 112px minmax(0, 1.35fr) minmax(330px, .95fr);
+    align-items: stretch;
+  }
+  .about-frame > .content-label {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about-frame > .content-main {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  .about-frame > .content-aside {
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 0;
+    border-top: 0;
+    border-left: 1px solid var(--rule);
+  }
+}
+
+@media (max-width: 1120px) {
+  .about-frame {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+  .about-frame > .content-label {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .about-frame > .content-main {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+  .about-frame > .content-aside {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+}
+
+.about-frame .meta-grid > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.about-frame .meta-grid strong {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .about-frame {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about-frame > .content-label {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about-frame > .content-main {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .about-frame > .content-aside {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .about-frame .meta-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+/* Research-line Instagram links: active and future destinations share one style. */
+.research-social-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  background: #fff;
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .025em;
+  line-height: 1.3;
+  transition: background .2s, border-color .2s, color .2s, transform .2s;
+}
+.research-social-link[href]:hover,
+.research-social-link[href]:focus-visible {
+  color: var(--navy);
+  background: var(--mint);
+  border-color: var(--teal);
+  transform: translateY(-2px);
+  outline-offset: 3px;
+}
+.instagram-glyph {
+  width: 19px;
+  height: 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.6px solid currentColor;
+  border-radius: 5px;
+  font-size: 1.08rem;
+  line-height: 1;
+}
+.social-arrow { margin-left: 2px; font-size: .9rem; }
+.research-social-link.is-pending {
+  color: #7a8589;
+  background: #f7f9f8;
+  border-style: dashed;
+  cursor: default;
+}
+.institution-link { color: #fff; opacity: .9; }
+.institution-link:hover, .institution-link:focus-visible { color: #fff; opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 600px) {
+  .research-social-link { margin-top: 15px; }
+}
